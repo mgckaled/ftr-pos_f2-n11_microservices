@@ -28,22 +28,14 @@ Repositório pessoal de registro, referência e suporte para fins de aprendizado
 
 - Docker Desktop v4.52.0
 
-## Recomendações para criação de artefatos markdown (`.md`)
+## Recomendações Básica Projeto Prático
 
-- Focar na didática, aprendizado e explicação.
-- Usar linguagem culta e formal
-- Considerar detalhes do contexto dos resumos das aulas, transcrições e referências recomendadas
-- Priorizar elaboração de texto mais dissertativos e extensos, para inclusão de contexto e explicações mais didáticas e elaboradas.
-- Limite de linhas: 1500.
-- Incluir na primeira linha/topo do artefato: `<!-- markdownlint-disable -->`
-- Priorizar exemplos de códigos em `typescript`
-- Padrão de tópicos:
-    1. Resumo executivo
-    2. Introção e Conceitos
-    3. Conteúdo em si (maior parte do documento)
-    4. Conclusões
-    5. Referências Bibliográficas (de fontes relevantes e oficiais)
-    6. Apendice (O que achar necessário como complemento + último apêndice: Glossário e Termos Técnicos)
+- planejar (plan mode on) salvar num doc em formato .md
+- Stack báisca: pnpm, typescript, nestjs, zod, Scalar (versão moderna do Swagger), docker, kubernetes (se for necessário)
+- projeto prático enxuto e pequeno, porém profissional e didático
+- seguir regras de DDD
+- aboordar o máximo de conceitos vistos nas aulas
+- não instale dependências, apenas envie o comando com a lista de devdependencies e dependencies
 
 ## Recomendações Gerais
 
@@ -52,3 +44,4 @@ Repositório pessoal de registro, referência e suporte para fins de aprendizado
 - após concluir uma atividade, escreva um breve texto dentro do chat de no MÁXIMO DUAS LINHAS (objetivo: economizar tokens em mensagens finais)
 - elaborar commits detalhados, porém não muito extensos.
 - não faça nenhum tipo de referências ao Claude Code nos textos de commit. sempre remover. ex: 🤖 Generated with [ClaudeCode](https://claude.com/claude-code) Co-Authored-By: Claude <noreply@anthropic.com>".
+  
