@@ -34,7 +34,7 @@ Repositório pessoal de registro, referência e suporte para fins de aprendizado
 - Usar linguagem culta e formal
 - Considerar detalhes do contexto dos resumos das aulas, transcrições e referências recomendadas
 - Priorizar elaboração de texto mais dissertativos e extensos, para inclusão de contexto e explicações mais didáticas e elaboradas.
-- Limite de linhas: 1000.
+- Limite de linhas: 1500.
 - Incluir na primeira linha/topo do artefato: `<!-- markdownlint-disable -->`
 - Priorizar exemplos de códigos em `typescript`
 - Padrão de tópicos:
@@ -49,6 +49,6 @@ Repositório pessoal de registro, referência e suporte para fins de aprendizado
 
 - Obedeça a formatação/lint na geração de arquivos markdown (`.md`)
 - NÃO USAR emojis em quaisquer documentos `.md` gerados
-- commits detalhados, porém não muito extensos.
-- após a conclusão uma atividade, escreva um breve texto dentro do chat de no MÁXIMO DUAS LINHAS (objetivo: economizar tokens em mensagens finais)
-- não faça nenhum tipo de referências ao Claude Code nos texto de commit. sempre remover. ex: 🤖 Generated with [ClaudeCode](https://claude.com/claude-code) Co-Authored-By: Claude <noreply@anthropic.com>".
+- após concluir uma atividade, escreva um breve texto dentro do chat de no MÁXIMO DUAS LINHAS (objetivo: economizar tokens em mensagens finais)
+- elaborar commits detalhados, porém não muito extensos.
+- não faça nenhum tipo de referências ao Claude Code nos textos de commit. sempre remover. ex: 🤖 Generated with [ClaudeCode](https://claude.com/claude-code) Co-Authored-By: Claude <noreply@anthropic.com>".
