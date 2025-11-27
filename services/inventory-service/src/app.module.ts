@@ -12,13 +12,22 @@ import { KafkaModule } from './kafka/kafka.module'
 		}),
 		TypeOrmModule.forRootAsync({
 			imports: [ConfigModule],
-			useFactory: (configService: ConfigService) => ({
-				type: 'postgres',
-				url: configService.get('DATABASE_URL'),
-				entities: [__dirname + '/**/*.entity{.ts,.js}'],
-				synchronize: true,
-				logging: false,
-			}),
+			useFactory: (configService: ConfigService) => {
+				const isDocker = configService.get('NODE_ENV') === 'docker'
+				const dbHost = isDocker ? 'inventory-db' : 'localhost'
+				const dbPort = isDocker ? 5432 : configService.get('DB_PORT', 5434)
+
+				const dbUrl = configService.get('DATABASE_URL') ||
+					`postgresql://postgres:postgres@${dbHost}:${dbPort}/inventory`
+
+				return {
+					type: 'postgres',
+					url: dbUrl,
+					entities: [__dirname + '/**/*.entity{.ts,.js}'],
+					synchronize: true,
+					logging: false,
+				}
+			},
 			inject: [ConfigService],
 		}),
 		ScheduleModule.forRoot(),

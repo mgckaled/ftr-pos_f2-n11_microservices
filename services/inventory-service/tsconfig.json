@@ -6,7 +6,7 @@
 		"baseUrl": ".",
 		"ignoreDeprecations": "5.0",
 		"paths": {
-			"@packages/*": ["../../packages/*/src"]
+			"@packages/*": ["../../packages/*/dist"]
 		}
 	},
 	"include": ["src/**/*"],
