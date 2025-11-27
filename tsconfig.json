@@ -17,9 +17,6 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "paths": {
-      "@packages/*": ["./packages/*/src"]
-    }
+    "resolveJsonModule": true
   }
 }
