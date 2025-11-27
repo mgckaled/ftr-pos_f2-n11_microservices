@@ -80,3 +80,8 @@ postgres-data/
 
 # TypeScript
 *.js.map
+
+# Compiled files in src directories (should only be in dist/)
+packages/*/src/**/*.js
+packages/*/src/**/*.d.ts
+packages/*/src/**/*.js.map
