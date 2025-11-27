@@ -4,6 +4,114 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@eslint/js':
+      specifier: ^9.39.1
+      version: 9.39.1
+    '@nestjs/common':
+      specifier: ^11.1.9
+      version: 11.1.9
+    '@nestjs/config':
+      specifier: ^4.0.2
+      version: 4.0.2
+    '@nestjs/core':
+      specifier: ^11.1.9
+      version: 11.1.9
+    '@nestjs/cqrs':
+      specifier: ^11.0.2
+      version: 11.0.3
+    '@nestjs/jwt':
+      specifier: ^11.0.1
+      version: 11.0.1
+    '@nestjs/passport':
+      specifier: ^11.0.5
+      version: 11.0.5
+    '@nestjs/platform-express':
+      specifier: ^11.1.9
+      version: 11.1.9
+    '@nestjs/schedule':
+      specifier: ^6.0.1
+      version: 6.0.1
+    '@nestjs/typeorm':
+      specifier: github:nestjs/typeorm
+      version: 11.0.0
+    '@scalar/nestjs-api-reference':
+      specifier: ^1.0.8
+      version: 1.0.8
+    '@types/jsonwebtoken':
+      specifier: ^9.0.10
+      version: 9.0.10
+    '@types/node':
+      specifier: ^24.10.1
+      version: 24.10.1
+    '@types/passport-jwt':
+      specifier: ^4.0.1
+      version: 4.0.1
+    '@types/uuid':
+      specifier: ^11.0.0
+      version: 11.0.0
+    argon2:
+      specifier: ^0.44.0
+      version: 0.44.0
+    axios:
+      specifier: ^1.13.2
+      version: 1.13.2
+    class-transformer:
+      specifier: ^0.5.1
+      version: 0.5.1
+    class-validator:
+      specifier: ^0.14.3
+      version: 0.14.3
+    globals:
+      specifier: ^15.15.0
+      version: 15.15.0
+    jsonwebtoken:
+      specifier: ^9.0.2
+      version: 9.0.2
+    jwks-rsa:
+      specifier: ^3.2.0
+      version: 3.2.0
+    kafkajs:
+      specifier: ^2.2.4
+      version: 2.2.4
+    passport:
+      specifier: ^0.7.0
+      version: 0.7.0
+    passport-jwt:
+      specifier: ^4.0.1
+      version: 4.0.1
+    pg:
+      specifier: ^8.16.3
+      version: 8.16.3
+    reflect-metadata:
+      specifier: ^0.2.2
+      version: 0.2.2
+    rxjs:
+      specifier: ^7.8.2
+      version: 7.8.2
+    ts-node-dev:
+      specifier: ^2.0.0
+      version: 2.0.0
+    typeorm:
+      specifier: ^0.3.27
+      version: 0.3.27
+    typescript:
+      specifier: ^5.9.3
+      version: 5.9.3
+    typescript-eslint:
+      specifier: ^8.48.0
+      version: 8.48.0
+    uuid:
+      specifier: ^13.0.0
+      version: 13.0.0
+    winston:
+      specifier: ^3.18.3
+      version: 3.18.3
+    zod:
+      specifier: ^4.1.13
+      version: 4.1.13
+
 importers:
 
   .:
@@ -31,7 +139,7 @@ importers:
         version: 6.0.1(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)
       '@nestjs/typeorm':
         specifier: github:nestjs/typeorm
-        version: https://codeload.github.com/nestjs/typeorm/tar.gz/164c9973e6eab47961f15d7095ede45a09275914(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)(typeorm@0.3.27(ioredis@5.8.2)(pg@8.16.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@24.10.1)(typescript@5.9.3)))
+        version: https://codeload.github.com/nestjs/typeorm/tar.gz/ebdd7f6ad516a514e92a015b0de639abd02da5cd(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)(typeorm@0.3.27(ioredis@5.8.2)(pg@8.16.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@24.10.1)(typescript@5.9.3)))
       '@scalar/nestjs-api-reference':
         specifier: ^1.0.8
         version: 1.0.8
@@ -87,6 +195,9 @@ importers:
         specifier: ^4.1.13
         version: 4.1.13
     devDependencies:
+      '@eslint/js':
+        specifier: 'catalog:'
+        version: 9.39.1
       '@nestjs/schematics':
         specifier: ^11.0.9
         version: 11.0.9(typescript@5.9.3)
@@ -120,6 +231,9 @@ importers:
       eslint:
         specifier: ^9.39.1
         version: 9.39.1
+      globals:
+        specifier: 'catalog:'
+        version: 15.15.0
       jest:
         specifier: ^30.2.0
         version: 30.2.0(@types/node@24.10.1)(ts-node@10.9.2(@types/node@24.10.1)(typescript@5.9.3))
@@ -137,6 +251,328 @@ importers:
         version: 2.0.0(@types/node@24.10.1)(typescript@5.9.3)
       typescript:
         specifier: ^5.9.3
+        version: 5.9.3
+      typescript-eslint:
+        specifier: 'catalog:'
+        version: 8.48.0(eslint@9.39.1)(typescript@5.9.3)
+
+  packages/common-utils: {}
+
+  packages/shared-types: {}
+
+  packages/validation-schemas: {}
+
+  services/analytics-service:
+    dependencies:
+      '@nestjs/common':
+        specifier: 'catalog:'
+        version: 11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/config':
+        specifier: 'catalog:'
+        version: 4.0.2(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(rxjs@7.8.2)
+      '@nestjs/core':
+        specifier: 'catalog:'
+        version: 11.1.9(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/cqrs':
+        specifier: 'catalog:'
+        version: 11.0.3(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/schedule':
+        specifier: 'catalog:'
+        version: 6.0.1(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)
+      '@nestjs/typeorm':
+        specifier: 'catalog:'
+        version: https://codeload.github.com/nestjs/typeorm/tar.gz/ebdd7f6ad516a514e92a015b0de639abd02da5cd(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)(typeorm@0.3.27(ioredis@5.8.2)(pg@8.16.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@24.10.1)(typescript@5.9.3)))
+      '@packages/common-utils':
+        specifier: workspace:*
+        version: link:../../packages/common-utils
+      '@packages/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      kafkajs:
+        specifier: 'catalog:'
+        version: 2.2.4
+      pg:
+        specifier: 'catalog:'
+        version: 8.16.3
+      reflect-metadata:
+        specifier: 'catalog:'
+        version: 0.2.2
+      rxjs:
+        specifier: 'catalog:'
+        version: 7.8.2
+      typeorm:
+        specifier: 'catalog:'
+        version: 0.3.27(ioredis@5.8.2)(pg@8.16.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@24.10.1)(typescript@5.9.3))
+      winston:
+        specifier: 'catalog:'
+        version: 3.18.3
+      zod:
+        specifier: 'catalog:'
+        version: 4.1.13
+    devDependencies:
+      '@types/node':
+        specifier: 'catalog:'
+        version: 24.10.1
+      ts-node-dev:
+        specifier: 'catalog:'
+        version: 2.0.0(@types/node@24.10.1)(typescript@5.9.3)
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
+
+  services/auth-service:
+    dependencies:
+      '@nestjs/common':
+        specifier: 'catalog:'
+        version: 11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/config':
+        specifier: 'catalog:'
+        version: 4.0.2(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(rxjs@7.8.2)
+      '@nestjs/core':
+        specifier: 'catalog:'
+        version: 11.1.9(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/jwt':
+        specifier: 'catalog:'
+        version: 11.0.1(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))
+      '@nestjs/platform-express':
+        specifier: 'catalog:'
+        version: 11.1.9(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)
+      '@nestjs/typeorm':
+        specifier: 'catalog:'
+        version: https://codeload.github.com/nestjs/typeorm/tar.gz/ebdd7f6ad516a514e92a015b0de639abd02da5cd(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)(typeorm@0.3.27(ioredis@5.8.2)(pg@8.16.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@24.10.1)(typescript@5.9.3)))
+      '@packages/common-utils':
+        specifier: workspace:*
+        version: link:../../packages/common-utils
+      '@packages/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@packages/validation-schemas':
+        specifier: workspace:*
+        version: link:../../packages/validation-schemas
+      '@scalar/nestjs-api-reference':
+        specifier: 'catalog:'
+        version: 1.0.8
+      argon2:
+        specifier: 'catalog:'
+        version: 0.44.0
+      class-transformer:
+        specifier: 'catalog:'
+        version: 0.5.1
+      class-validator:
+        specifier: 'catalog:'
+        version: 0.14.3
+      jsonwebtoken:
+        specifier: 'catalog:'
+        version: 9.0.2
+      kafkajs:
+        specifier: 'catalog:'
+        version: 2.2.4
+      pg:
+        specifier: 'catalog:'
+        version: 8.16.3
+      reflect-metadata:
+        specifier: 'catalog:'
+        version: 0.2.2
+      rxjs:
+        specifier: 'catalog:'
+        version: 7.8.2
+      typeorm:
+        specifier: 'catalog:'
+        version: 0.3.27(ioredis@5.8.2)(pg@8.16.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@24.10.1)(typescript@5.9.3))
+      winston:
+        specifier: 'catalog:'
+        version: 3.18.3
+      zod:
+        specifier: 'catalog:'
+        version: 4.1.13
+    devDependencies:
+      '@types/jsonwebtoken':
+        specifier: 'catalog:'
+        version: 9.0.10
+      '@types/node':
+        specifier: 'catalog:'
+        version: 24.10.1
+      ts-node-dev:
+        specifier: 'catalog:'
+        version: 2.0.0(@types/node@24.10.1)(typescript@5.9.3)
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
+
+  services/inventory-service:
+    dependencies:
+      '@nestjs/common':
+        specifier: 'catalog:'
+        version: 11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/config':
+        specifier: 'catalog:'
+        version: 4.0.2(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(rxjs@7.8.2)
+      '@nestjs/core':
+        specifier: 'catalog:'
+        version: 11.1.9(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/passport':
+        specifier: 'catalog:'
+        version: 11.0.5(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(passport@0.7.0)
+      '@nestjs/platform-express':
+        specifier: 'catalog:'
+        version: 11.1.9(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)
+      '@nestjs/schedule':
+        specifier: 'catalog:'
+        version: 6.0.1(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)
+      '@nestjs/typeorm':
+        specifier: 'catalog:'
+        version: https://codeload.github.com/nestjs/typeorm/tar.gz/ebdd7f6ad516a514e92a015b0de639abd02da5cd(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)(typeorm@0.3.27(ioredis@5.8.2)(pg@8.16.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@24.10.1)(typescript@5.9.3)))
+      '@packages/common-utils':
+        specifier: workspace:*
+        version: link:../../packages/common-utils
+      '@packages/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@packages/validation-schemas':
+        specifier: workspace:*
+        version: link:../../packages/validation-schemas
+      '@scalar/nestjs-api-reference':
+        specifier: 'catalog:'
+        version: 1.0.8
+      class-transformer:
+        specifier: 'catalog:'
+        version: 0.5.1
+      class-validator:
+        specifier: 'catalog:'
+        version: 0.14.3
+      jwks-rsa:
+        specifier: 'catalog:'
+        version: 3.2.0
+      kafkajs:
+        specifier: 'catalog:'
+        version: 2.2.4
+      passport:
+        specifier: 'catalog:'
+        version: 0.7.0
+      passport-jwt:
+        specifier: 'catalog:'
+        version: 4.0.1
+      pg:
+        specifier: 'catalog:'
+        version: 8.16.3
+      reflect-metadata:
+        specifier: 'catalog:'
+        version: 0.2.2
+      rxjs:
+        specifier: 'catalog:'
+        version: 7.8.2
+      typeorm:
+        specifier: 'catalog:'
+        version: 0.3.27(ioredis@5.8.2)(pg@8.16.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@24.10.1)(typescript@5.9.3))
+      winston:
+        specifier: 'catalog:'
+        version: 3.18.3
+      zod:
+        specifier: 'catalog:'
+        version: 4.1.13
+    devDependencies:
+      '@types/node':
+        specifier: 'catalog:'
+        version: 24.10.1
+      '@types/passport-jwt':
+        specifier: 'catalog:'
+        version: 4.0.1
+      ts-node-dev:
+        specifier: 'catalog:'
+        version: 2.0.0(@types/node@24.10.1)(typescript@5.9.3)
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
+
+  services/orders-service:
+    dependencies:
+      '@nestjs/common':
+        specifier: 'catalog:'
+        version: 11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/config':
+        specifier: 'catalog:'
+        version: 4.0.2(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(rxjs@7.8.2)
+      '@nestjs/core':
+        specifier: 'catalog:'
+        version: 11.1.9(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/passport':
+        specifier: 'catalog:'
+        version: 11.0.5(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(passport@0.7.0)
+      '@nestjs/platform-express':
+        specifier: 'catalog:'
+        version: 11.1.9(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)
+      '@nestjs/typeorm':
+        specifier: 'catalog:'
+        version: https://codeload.github.com/nestjs/typeorm/tar.gz/ebdd7f6ad516a514e92a015b0de639abd02da5cd(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)(typeorm@0.3.27(ioredis@5.8.2)(pg@8.16.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@24.10.1)(typescript@5.9.3)))
+      '@packages/common-utils':
+        specifier: workspace:*
+        version: link:../../packages/common-utils
+      '@packages/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@packages/validation-schemas':
+        specifier: workspace:*
+        version: link:../../packages/validation-schemas
+      '@scalar/nestjs-api-reference':
+        specifier: 'catalog:'
+        version: 1.0.8
+      axios:
+        specifier: 'catalog:'
+        version: 1.13.2
+      class-transformer:
+        specifier: 'catalog:'
+        version: 0.5.1
+      class-validator:
+        specifier: 'catalog:'
+        version: 0.14.3
+      jwks-rsa:
+        specifier: 'catalog:'
+        version: 3.2.0
+      kafkajs:
+        specifier: 'catalog:'
+        version: 2.2.4
+      passport:
+        specifier: 'catalog:'
+        version: 0.7.0
+      passport-jwt:
+        specifier: 'catalog:'
+        version: 4.0.1
+      pg:
+        specifier: 'catalog:'
+        version: 8.16.3
+      reflect-metadata:
+        specifier: 'catalog:'
+        version: 0.2.2
+      rxjs:
+        specifier: 'catalog:'
+        version: 7.8.2
+      typeorm:
+        specifier: 'catalog:'
+        version: 0.3.27(ioredis@5.8.2)(pg@8.16.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@24.10.1)(typescript@5.9.3))
+      uuid:
+        specifier: 'catalog:'
+        version: 13.0.0
+      winston:
+        specifier: 'catalog:'
+        version: 3.18.3
+      zod:
+        specifier: 'catalog:'
+        version: 4.1.13
+    devDependencies:
+      '@types/node':
+        specifier: 'catalog:'
+        version: 24.10.1
+      '@types/passport-jwt':
+        specifier: 'catalog:'
+        version: 4.0.1
+      '@types/uuid':
+        specifier: 'catalog:'
+        version: 11.0.0
+      ts-node-dev:
+        specifier: 'catalog:'
+        version: 2.0.0(@types/node@24.10.1)(typescript@5.9.3)
+      typescript:
+        specifier: 'catalog:'
         version: 5.9.3
 
 packages:
@@ -559,6 +995,14 @@ packages:
       '@nestjs/websockets':
         optional: true
 
+  '@nestjs/cqrs@11.0.3':
+    resolution: {integrity: sha512-2ezBftiXqVfNTzjCrmhazohYhIQzgm8rvM0aKndv73IOOBcVlNuNiQ3HHiHdd4c2w/3MOQDtsGbQHgZUuW6DPw==}
+    peerDependencies:
+      '@nestjs/common': ^10.0.0 || ^11.0.0
+      '@nestjs/core': ^10.0.0 || ^11.0.0
+      reflect-metadata: ^0.1.13 || ^0.2.0
+      rxjs: ^7.2.0
+
   '@nestjs/jwt@11.0.1':
     resolution: {integrity: sha512-HXSsc7SAnCnjA98TsZqrE7trGtHDnYXWp4Ffy6LwSmck1QvbGYdMzBquXofX5l6tIRpeY4Qidl2Ti2CVG77Pdw==}
     peerDependencies:
@@ -600,8 +1044,8 @@ packages:
       '@nestjs/platform-express':
         optional: true
 
-  '@nestjs/typeorm@https://codeload.github.com/nestjs/typeorm/tar.gz/164c9973e6eab47961f15d7095ede45a09275914':
-    resolution: {tarball: https://codeload.github.com/nestjs/typeorm/tar.gz/164c9973e6eab47961f15d7095ede45a09275914}
+  '@nestjs/typeorm@https://codeload.github.com/nestjs/typeorm/tar.gz/ebdd7f6ad516a514e92a015b0de639abd02da5cd':
+    resolution: {tarball: https://codeload.github.com/nestjs/typeorm/tar.gz/ebdd7f6ad516a514e92a015b0de639abd02da5cd}
     version: 11.0.0
     peerDependencies:
       '@nestjs/common': ^10.0.0 || ^11.0.0
@@ -1651,6 +2095,10 @@ packages:
 
   globals@14.0.0:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
+    engines: {node: '>=18'}
+
+  globals@15.15.0:
+    resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
     engines: {node: '>=18'}
 
   gopd@1.2.0:
@@ -2907,6 +3355,13 @@ packages:
       typeorm-aurora-data-api-driver:
         optional: true
 
+  typescript-eslint@8.48.0:
+    resolution: {integrity: sha512-fcKOvQD9GUn3Xw63EgiDqhvWJ5jsyZUaekl3KVpGsDJnN46WJTe3jWxtQP9lMZm1LJNkFLlTaWAxK2vUQR+cqw==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0
+      typescript: '>=4.8.4 <6.0.0'
+
   typescript@5.9.3:
     resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
     engines: {node: '>=14.17'}
@@ -3624,6 +4079,13 @@ snapshots:
     optionalDependencies:
       '@nestjs/platform-express': 11.1.9(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)
 
+  '@nestjs/cqrs@11.0.3(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)':
+    dependencies:
+      '@nestjs/common': 11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/core': 11.1.9(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      reflect-metadata: 0.2.2
+      rxjs: 7.8.2
+
   '@nestjs/jwt@11.0.1(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))':
     dependencies:
       '@nestjs/common': 11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -3672,7 +4134,7 @@ snapshots:
     optionalDependencies:
       '@nestjs/platform-express': 11.1.9(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)
 
-  '@nestjs/typeorm@https://codeload.github.com/nestjs/typeorm/tar.gz/164c9973e6eab47961f15d7095ede45a09275914(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)(typeorm@0.3.27(ioredis@5.8.2)(pg@8.16.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@24.10.1)(typescript@5.9.3)))':
+  '@nestjs/typeorm@https://codeload.github.com/nestjs/typeorm/tar.gz/ebdd7f6ad516a514e92a015b0de639abd02da5cd(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)(typeorm@0.3.27(ioredis@5.8.2)(pg@8.16.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@24.10.1)(typescript@5.9.3)))':
     dependencies:
       '@nestjs/common': 11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2)
       '@nestjs/core': 11.1.9(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@11.1.9)(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -4453,7 +4915,7 @@ snapshots:
 
   dotenv-expand@12.0.1:
     dependencies:
-      dotenv: 16.4.7
+      dotenv: 16.6.1
 
   dotenv@16.4.7: {}
 
@@ -4793,6 +5255,8 @@ snapshots:
       path-is-absolute: 1.0.1
 
   globals@14.0.0: {}
+
+  globals@15.15.0: {}
 
   gopd@1.2.0: {}
 
@@ -6133,6 +6597,17 @@ snapshots:
       ts-node: 10.9.2(@types/node@24.10.1)(typescript@5.9.3)
     transitivePeerDependencies:
       - babel-plugin-macros
+      - supports-color
+
+  typescript-eslint@8.48.0(eslint@9.39.1)(typescript@5.9.3):
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 8.48.0(@typescript-eslint/parser@8.48.0(eslint@9.39.1)(typescript@5.9.3))(eslint@9.39.1)(typescript@5.9.3)
+      '@typescript-eslint/parser': 8.48.0(eslint@9.39.1)(typescript@5.9.3)
+      '@typescript-eslint/typescript-estree': 8.48.0(typescript@5.9.3)
+      '@typescript-eslint/utils': 8.48.0(eslint@9.39.1)(typescript@5.9.3)
+      eslint: 9.39.1
+      typescript: 5.9.3
+    transitivePeerDependencies:
       - supports-color
 
   typescript@5.9.3: {}

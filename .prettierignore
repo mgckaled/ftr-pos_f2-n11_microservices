@@ -1,0 +1,11 @@
+node_modules
+dist
+coverage
+.pnpm-store
+*.lock
+pnpm-lock.yaml
+*.md
+.github/
+.claude/
+docs/
+

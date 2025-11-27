@@ -1,2 +1,2 @@
-export * from './auth.schemas';
-export * from './orders.schemas';
+export * from './auth.schemas'
+export * from './orders.schemas'
