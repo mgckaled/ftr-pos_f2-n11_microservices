@@ -4,7 +4,7 @@ export const createOrderSchema = z.object({
 	items: z
 		.array(
 			z.object({
-				productId: z.string().uuid({ message: 'Product ID inválido' }),
+				productId: z.uuid({ message: 'Product ID inválido' }),
 				quantity: z.number().int().positive({ message: 'Quantidade deve ser positiva' }),
 			})
 		)
