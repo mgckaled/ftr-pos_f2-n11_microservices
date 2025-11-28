@@ -7,20 +7,24 @@ Criar um API Gateway na porta 4000 que centraliza o acesso aos 4 microsserviços
 ## Decisões de Arquitetura
 
 ### Roteamento
+
 Proxy HTTP simples usando http-proxy-middleware
 
 ### Autenticação
+
 Pass-through - gateway não valida JWT, serviços continuam validando independentemente
 
 ### Documentação
+
 Scalar UI centralizada apenas no gateway com OpenAPI spec manual
 
 ### Error Handling
+
 Tratamento de erros críticos: 401/403 (auth) e 502 (bad gateway)
 
 ## Estrutura do Serviço
 
-```
+```plaintext
 services/api-gateway/
 ├── src/
 │   ├── main.ts                          # Bootstrap + proxies
@@ -54,17 +58,21 @@ O gateway irá rotear requisições baseado em prefixos:
 ## Tratamento de Erros
 
 ### Bad Gateway (502)
+
 Retornado quando:
+
 - Serviço backend está fora do ar (ECONNREFUSED)
 - Timeout de conexão (ETIMEDOUT)
 - Serviço não encontrado (ENOTFOUND)
 
 ### Auth Errors (401/403)
+
 Capturados e logados, mas repassados do backend sem modificação
 
 ## Documentação Agregada
 
 OpenAPI spec manual no endpoint `/api-docs` com Scalar UI incluindo:
+
 - Todos endpoints de Auth Service
 - Todos endpoints de Orders Service
 - Todos endpoints de Inventory Service
@@ -78,9 +86,11 @@ OpenAPI spec manual no endpoint `/api-docs` com Scalar UI incluindo:
 ## Modificações em Arquivos Existentes
 
 ### pnpm-workspace.yaml
+
 Adicionar http-proxy-middleware e @types/http-proxy ao catalog
 
 ### docker-compose.yml
+
 Adicionar serviço api-gateway com dependências dos 4 serviços
 
 ## Ordem de Implementação
@@ -98,6 +108,7 @@ Adicionar serviço api-gateway com dependências dos 4 serviços
 ## Configuração Dinâmica
 
 Assim como os outros serviços, o gateway usará NODE_ENV para determinar URLs:
+
 - `development`: localhost com portas específicas
 - `docker`: nomes de containers na rede interna
 

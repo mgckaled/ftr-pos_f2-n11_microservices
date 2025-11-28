@@ -1,3 +1,5 @@
+<!-- markdownlint-disable -->
+
 # Kafka Consumer Groups e Rebalanceamento
 
 ## Visão Geral

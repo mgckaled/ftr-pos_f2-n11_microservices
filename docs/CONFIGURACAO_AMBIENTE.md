@@ -1,3 +1,5 @@
+<!-- markdownlint-disable -->
+
 # Configuração de Ambiente
 
 ## Visão Geral
