@@ -13,7 +13,7 @@ COPY services/api-gateway ./services/api-gateway
 COPY tsconfig.json ./
 
 WORKDIR /app/services/api-gateway
-RUN pnpm build
+RUN ../../node_modules/.bin/tsc
 
 FROM node:22-alpine
 
