@@ -1,0 +1,72 @@
+### API Gateway - Testes de Rotas
+### Certifique-se de que todos os serviços estejam rodando localmente
+
+@gateway = http://localhost:4000
+@authToken = seu_token_aqui
+
+### 1. Health Check - Auth Service via Gateway
+GET {{gateway}}/api/auth/health
+
+### 2. Registrar novo usuário
+POST {{gateway}}/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "password123"
+}
+
+### 3. Login
+POST {{gateway}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "password123"
+}
+
+### 4. Obter perfil do usuário (requer autenticação)
+GET {{gateway}}/api/auth/profile
+Authorization: Bearer {{authToken}}
+
+### 5. JWKS (JSON Web Key Set)
+GET {{gateway}}/api/auth/.well-known/jwks.json
+
+### 6. Listar produtos - Inventory Service
+GET {{gateway}}/api/inventory/products
+
+### 7. Obter produto por ID - Inventory Service
+GET {{gateway}}/api/inventory/products/1
+
+### 8. Listar pedidos (requer autenticação)
+GET {{gateway}}/api/orders
+Authorization: Bearer {{authToken}}
+
+### 9. Criar novo pedido (requer autenticação)
+POST {{gateway}}/api/orders
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "items": [
+    {
+      "productId": "1",
+      "quantity": 2
+    }
+  ]
+}
+
+### 10. Obter pedido por ID (requer autenticação)
+GET {{gateway}}/api/orders/1
+Authorization: Bearer {{authToken}}
+
+### 11. Métricas - Analytics Service (requer autenticação)
+GET {{gateway}}/api/analytics/metrics
+Authorization: Bearer {{authToken}}
+
+### 12. Documentação Scalar - API Reference
+GET {{gateway}}/reference
+
+### Teste de erro - Rota inexistente
+GET {{gateway}}/api/nonexistent

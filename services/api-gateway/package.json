@@ -1,0 +1,27 @@
+{
+	"name": "@services/api-gateway",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "ts-node-dev --respawn --transpile-only src/main.ts",
+		"build": "tsc",
+		"start": "node dist/main.js"
+	},
+	"dependencies": {
+		"@nestjs/common": "catalog:",
+		"@nestjs/core": "catalog:",
+		"@nestjs/config": "catalog:",
+		"@nestjs/platform-express": "catalog:",
+		"@scalar/nestjs-api-reference": "catalog:",
+		"@packages/common-utils": "workspace:*",
+		"http-proxy-middleware": "catalog:",
+		"reflect-metadata": "catalog:",
+		"rxjs": "catalog:"
+	},
+	"devDependencies": {
+		"@types/node": "catalog:",
+		"@types/http-proxy": "catalog:",
+		"typescript": "catalog:",
+		"ts-node-dev": "catalog:"
+	}
+}

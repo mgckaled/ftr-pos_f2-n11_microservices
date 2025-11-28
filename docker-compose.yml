@@ -217,6 +217,28 @@ services:
       - microservices-net
     restart: unless-stopped
 
+  api-gateway:
+    build:
+      context: .
+      dockerfile: ./services/api-gateway/Dockerfile
+    environment:
+      PORT: 4000
+      NODE_ENV: docker
+    ports:
+      - "4000:4000"
+    depends_on:
+      auth-service:
+        condition: service_started
+      orders-service:
+        condition: service_started
+      inventory-service:
+        condition: service_started
+      analytics-service:
+        condition: service_started
+    networks:
+      - microservices-net
+    restart: unless-stopped
+
 networks:
   microservices-net:
     driver: bridge

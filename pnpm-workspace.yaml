@@ -18,6 +18,7 @@ catalog:
   '@nestjs/typeorm': ^11.0.0
   '@scalar/nestjs-api-reference': ^1.0.8
   '@types/express': ^5.0.5
+  '@types/http-proxy': ^1.17.15
   '@types/jest': ^30.0.0
   '@types/jsonwebtoken': ^9.0.10
   '@types/node': ^24.10.1
@@ -31,6 +32,7 @@ catalog:
   class-validator: ^0.14.3
   eslint: ^9.39.1
   globals: ^15.15.0
+  'http-proxy-middleware': ^3.0.0
   ioredis: ^5.8.2
   jest: ^30.2.0
   jsonwebtoken: ^9.0.2
