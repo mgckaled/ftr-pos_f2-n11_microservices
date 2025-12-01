@@ -2,6 +2,13 @@
 
 Repositório pessoal de registro, referência e suporte para fins de aprendizado, consulta e acompanhamento da disciplina de Fundamentos de Microsserviços (Nível 11), Fase 2 (Estratégia e Inovação), do curso de Pós-Graduação Tech Developer 360, desenvolvido pela Faculdade de Tecnologia Rocketseat (FTR).
 
+> [NOTE!]
+> [Questionário Avaliativo](./.github/docs/content/assessment/q.md)
+>
+> [Resumo das aulas](./.github/docs/content/resume/classes.md)
+>
+> [Repositório](https://github.com/rocketseat-education/ftr-fundamentos-microsservicos) de acompanhamento das aulas
+
 ## Projeto Prático: Distributed Order Platform
 
 O projeto implementa arquitetura de microsserviços distribuída composta por quatro serviços de domínio independentes coordenados por API Gateway centralizado, demonstrando pragmaticamente padrões fundamentais de sistemas distribuídos aplicados a plataforma de gerenciamento de pedidos. Arquitetura estabelece separação rigorosa mediante princípio Database per Service com quatro instâncias PostgreSQL isoladas, comunicação assíncrona através de Apache Kafka para propagação de eventos de negócio, comunicação síncrona HTTP/REST para operações críticas exigindo validação imediata, Redis para caching distribuído e implementação de idempotência, validação tipada end-to-end mediante Zod schemas, e autenticação centralizada mediante JSON Web Tokens assinados com algoritmo assimétrico RS256 publicando chaves públicas via JSON Web Key Set. Stack tecnológica fundamenta-se em Node.js v22 com TypeScript fornecendo type safety completo, framework NestJS oferecendo arquitetura modular enterprise-grade com dependency injection nativo, gerenciamento de dependências via pnpm workspaces organizando monorepo, TypeORM para persistência relacional, KafkaJS como cliente Apache Kafka, Scalar substituindo Swagger para documentação OpenAPI moderna, e Docker Compose orquestrando infraestrutura completa permitindo execução local simplificada.
